@@ -1,0 +1,56 @@
+* {
+  /* outline: 1px solid red; */
+}
+
+body {
+  font-family: Century, Muli, 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro',
+    sans-serif;
+  position: relative;
+}
+
+header {
+  position: sticky;
+  top: 0px;
+}
+
+.header-conatiner {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+}
+
+.nav-logo-area {
+  display: block;
+}
+
+.nav-logo {
+  height: 70px;
+  width: 70px;
+}
+
+.navbar {
+  display: block;
+}
+
+.nav-list {
+  height: 100%;
+}
+
+.nav-list-item {
+  display: inline-block;
+  height: 100%;
+  font-size: 18px;
+  line-height: 70px;
+  color: black;
+}
+
+.nav-list-items {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.nav-list-item:hover {
+  background-color: #ffeb3e;
+}
