@@ -6,10 +6,28 @@
    </head>
    <body>
    <header>
-    <div id="top-header">
+    <div class="header" id="top-header">
         <div id="logo">
             <img src="logo.png"/>
         </div>
+        <script>// When the user scrolls the page, execute myFunction
+          window.onscroll = function() {myFunction()};
+          
+          // Get the header
+          var header = document.getElementById("top-header");
+          
+          // Get the offset position of the navbar
+          var sticky = header.offsetTop;
+          
+          // Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
+          function myFunction() {
+            if (window.pageYOffset > sticky) {
+              header.classList.add("sticky");
+            } else {
+              header.classList.remove("sticky");
+            }
+            }
+        </script>
         <nav id="menu">
             <ul>
                 <li class="active">
