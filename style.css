@@ -31,7 +31,7 @@ ol, ul {
 }
 
 .container {
-  margin: Opx auto;
+  margin: 0 auto;
   width: 1200px;
 }
 
@@ -39,48 +39,58 @@ ol, ul {
 /**STYLING HEADER*/
 header {
   overflow: hidden;
+  height: 80px;
 }
 
 #top-header {
   text-align: center;
   height: 60px;
 }
+
+#top-header.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 /**STYLING LOGO */
 #logo {
-  
-  float: left;
+  align-self: center;
   padding: none;
-  margin: 10px;
-  height: 0px;
-  width: 80px;
+  margin: 0;
+  height: 70px; /* Ajustez selon la taille réelle de votre logo */
+  width: 70px; /* Ajustez selon la taille réelle de votre logo */
+  overflow: hidden; /* Masque le contenu qui dépasse de la hauteur du conteneur */
 }
 
 #logo img {
-  margin-top: -20px;
-  width: 85%;
-  float: left;
-  padding: 10px 0px;
+  width: 90%;
 }
 /* STYLING NAVIGATION MENU */
 
 #menu {
-  float: right;
   width: 70%;
   height: 100%;
-  margin: none;
+  margin: 0;
 }
 
 #menu ul {
   text-align: center;
   float: right;
-  margin: none;
+  margin: 0;
   background: #0074D9;
 }
 
 #menu li {
   display: inline-block;
-  padding: none;
-  margin: none;
+  padding: 0;
+  margin: 0;
 }
 
 #menu li a, #menu li span{
@@ -135,12 +145,19 @@ header {
       background-color: #ffc169;
         z-index:-1;}
 .sticky {
+    height: 100px;
     position: fixed;
     top: 0;
-    width: 100%
-}
-
-.sticky + .content {
-    padding-top: 102px;
+    width: 100%;
+    transition: all 0.3s ease; /* Ajout de la transition */
+    z-index: 1000;
+    background: #FFFFFF
   }
-
+.sticky + .content {
+    padding-top: 80px;
+  }
+  .sticky #logo {
+    padding: 10px 0; /* Ajustez la valeur de padding selon vos besoins */
+    height: 70px; /* Ajustez selon la taille réelle de votre logo */
+    width: 70px; /* Ajustez selon la taille réelle de votre logo */
+  }
