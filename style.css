@@ -1,163 +1,104 @@
-html, body {
-  height: 100%;
-}
-
 body {
-  margin: 0px;
-  padding: 0px;
-  background: #FFFFFF;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  font-size: 12pt;
+  font-family: Century, Muli, 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro',
+    sans-serif;
+  position: relative;
 }
 
-h1, h2, h3 {
-  margin: 0px;
-  padding: 0px;
-  color: #404040;
-}
-
-p, ol, ul {
-  margin-top: 0;
-}
-
-p {
-  line-height: 180%;
-
-}
-
-ol, ul {
-  padding: 0px;
-  list-style: none;
-}
-
-.container {
-  margin: 0 auto;
-  width: 1200px;
-}
-
-
-/**STYLING HEADER*/
 header {
-  overflow: hidden;
-  height: 80px;
-}
-
-#top-header {
-  text-align: center;
-  height: 60px;
-}
-
-#top-header.sticky {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
+  position: sticky;
+  top: 0px;
+  z-index: 1;
 }
 
 .header-container {
   display: flex;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  width: 100%;
+  height: 75px;
   justify-content: space-between;
-  align-items: center;
-}
-/**STYLING LOGO */
-#logo {
-  align-self: center;
-  padding: none;
-  margin: 0;
-  height: 70px; /* Ajustez selon la taille réelle de votre logo */
-  width: 70px; /* Ajustez selon la taille réelle de votre logo */
-  overflow: hidden; /* Masque le contenu qui dépasse de la hauteur du conteneur */
+  background-color: #FFF;
 }
 
-#logo img {
-  width: 90%;
+.logo-container {
+  display: block;
 }
-/* STYLING NAVIGATION MENU */
 
-#menu {
-  width: 70%;
+.nav-logo {
+  height: 70px;
+  width: 70px;
+}
+
+.nav-bar {
+  display: block;
+}
+
+.nav-list {
+  height: 70px;
+}
+
+.nav-list-item {
+  display: inline-block;
   height: 100%;
-  margin: 0;
+  font-size: 17px;
+  line-height: 70px;
+  color: darkslategray;
 }
 
-#menu ul {
+.nav-list-items {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.nav-list-item:hover {
+  background-color: #ffeb3e;
+  transform-origin: bottom;
+  transition-duration: 1s;
+}
+
+.content {
+position: relative;
+}
+
+.section {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1200px;
+}
+
+.section .title {
+  font-weight: bold;
+  font-size: 40px;
   text-align: center;
-  float: right;
-  margin: 0;
-  background: #0074D9;
 }
 
-#menu li {
-  display: inline-block;
-  padding: 0;
-  margin: 0;
+.section .title strong {
+  position: relative;
 }
 
-#menu li a, #menu li span{
-  display: inline-block;
-  padding: 0em 1.5em;
-  text-decoration: none;
-  font-weight: 600;
-  text-transform: uppercase;
-  line-height: 60px;
-}
-
-#menu li a{
-  color: #FFF;
-}
-
-#menu li:hover a, #menu li span{
-  background: #FFF;
-  color: #0074D9;
-  border-left: 1px solid #0074D9;
-  text-decoration: none;
-}
-
-#divingschoolimg1{
-  height: 360px;
-  width: 480px;
-}
-
-.h2Style {
+.section .subtitle {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  font-size: 1.3rem;
   text-align: center;
-  line-height: 1;
-  margin-bottom: 50px; }
-  .h2Style strong {
-    display: inline-block;
-    font-weight: 900;
-    font-size: 40px;
-    padding: 0 4px 2px;
-    position: relative;
-    min-width: 312px;
-    margin-bottom: 2px;}
-    .h2Style strong span {
-      display: block;
-      position: relative;
-      z-index: 2; }
-    .h2Style strong:before {
-      content: '';
-      display: block;
-      height: 11px;
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      background-color: #ffc169;
-        z-index:-1;}
-.sticky {
-    height: 100px;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    transition: all 0.3s ease; /* Ajout de la transition */
-    z-index: 1000;
-    background: #FFFFFF
-  }
-.sticky + .content {
-    padding-top: 80px;
-  }
-  .sticky #logo {
-    padding: 10px 0; /* Ajustez la valeur de padding selon vos besoins */
-    height: 70px; /* Ajustez selon la taille réelle de votre logo */
-    width: 70px; /* Ajustez selon la taille réelle de votre logo */
-  }
+  font-weight: 700;
+  color: #404040;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.section .title strong::before {
+  content: '';
+  display: block;
+  height: 11px;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  position: absolute;
+  background-color: #ffeb3e;
+  z-index: -1;
+}
+
+.section .banner{
+  display: block;
+  width: 100%;
+}
