@@ -51,6 +51,18 @@ header {
   transition-duration: 1s;
 }
 
+#language-button {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+.flag-icon {
+  width: 30px; /* Ajustez la taille du drapeau selon vos besoins */
+  height: auto;
+}
+
 .content {
   position: relative;
 }
